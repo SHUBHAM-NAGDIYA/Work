@@ -1,4 +1,67 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// Public pages
+import LandingPage from "./pages/LandingPage";
+import LoginPage from "./pages/LoginPage";
+import PricingPage from "./pages/PricingPage";
+import OwnerRegisterPage from "./pages/OwnerRegistration";
+
+// Owner pages
+import OwnerDashboard from "./pages/OwnerDashboard";
+import CreateAdmin from "./pages/CreateAdmin";
+import ManageSubscriptions from "./pages/ManageSubscriptions";
+
+// Admin pages
+import AdminDashboard from "./pages/AdminDashboard";
+import CreateMember from "./pages/CreateMember";
+import CreateTeam from "./pages/CreateTeam";
+
+// Member pages
+import MemberDashboard from "./pages/MemberDashboard";
+
+// Project / task pages
+import CreateProject from "./pages/CreateProject";
+import ProjectList from "./pages/ProjectList";
+import TeamProjectManager from "./pages/TeamProjectManager";
+import CreateTask from "./pages/CreateTask";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Public */}
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/LoginPage" element={<LoginPage />} />
+        <Route path="/PricingPage" element={<PricingPage />} />
+        <Route path="/OwnerRegistration" element={<OwnerRegisterPage />} />
+
+        {/* Owner */}
+        <Route path="/OwnerDashboard" element={<OwnerDashboard />} />
+        <Route path="/CreateAdmin" element={<CreateAdmin />} />
+        <Route path="/ManageSubscriptions" element={<ManageSubscriptions />} />
+
+        {/* Admin */}
+        <Route path="/AdminDashboard" element={<AdminDashboard />} />
+        <Route path="/CreateMember" element={<CreateMember />} />
+        <Route path="/CreateTeam" element={<CreateTeam />} />
+
+        {/* Member */}
+        <Route path="/MemberDashboard" element={<MemberDashboard />} />
+
+        {/* Projects & Tasks */}
+        <Route path="/CreateProject" element={<CreateProject />} />
+        <Route path="/ProjectList" element={<ProjectList />} />
+        <Route path="/TeamProjectManager" element={<TeamProjectManager />} />
+        <Route path="/CreateTask" element={<CreateTask />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+
+/*
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
 import OwnerRegisterPage  from "./pages/OwnerRegistration";
@@ -45,7 +108,7 @@ export default App;
 
 
 
-
+*/
 
 
 /*
