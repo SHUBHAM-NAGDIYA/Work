@@ -27,9 +27,11 @@ def create_project(name, team_id, created_by, deadline=None):
 
     # 🔹 Subscription check
     plan = organization.subscription_plan
-    if plan and plan.max_projects:
+    if plan and plan.max_projects is not None:
         if organization.projects.count() >= plan.max_projects:
             raise ValueError("Project limit reached")
+
+
 
     # 🔹 Duplicate check (extra safety)
     if Project.objects.filter(name=name, organization=organization).exists():
